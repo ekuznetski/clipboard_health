@@ -1,10 +1,7 @@
 import { EFilter } from "../domain/enums/filterby.enum";
 import { EGroup } from "../domain/enums/groupby.enum";
-import {
-  IEmployee,
-  IEmployees,
-} from "../domain/interfaces/employees.interface";
-import { IGetSalaryStatParams } from "../domain/interfaces/salaryStat.interface";
+import { IEmployee, IEmployees, } from "../domain/interfaces/employees.interface";
+import { IGetSalaryStatParams, } from "../domain/interfaces/salaryStat.interface";
 import mockData from "../mockSalaries.json";
 import calculateSalaryStat from "../utils/calculateSalaryStat.util";
 
@@ -37,6 +34,8 @@ function getEmployees(
   filterby?: EFilter,
   groupby?: EGroup
 ): Promise<IEmployees> {
+
+  // try to simulate DB behavior
   // in real app I assume grouping should be done on DB side, eg: 'aggregate' in mongo, or 'group by' in postgres
 
   return new Promise((resolve, reject) => {

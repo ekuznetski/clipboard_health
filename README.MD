@@ -1,7 +1,7 @@
 ## Clipboard Health
 
 
-test task
+test task by Egor Kuznetski
 
 for run app use `docker-compose up`, all deps will be installed automatically  
 for tests use `yarn run test`

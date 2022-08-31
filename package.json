@@ -2,6 +2,7 @@
   "name": "clipboard_health",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Egor Kuznetski",
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon",

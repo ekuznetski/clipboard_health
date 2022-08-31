@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+    # Minimal Ubuntu 18.04.2 LTS with angular, nodejs, nginx and mongo tools
+    clipboard_health:
+        image: node:lts
+        container_name: clipboard_health
+        ports:
+            - 4000:4000
+        volumes:
+            - ./:/app
+            - ./node_modules
+            - ./build
+        restart: always
+        tty: true
+        command: bash -c "
+            cd ./app 
+            && yarn 
+            && yarn start
+            "
